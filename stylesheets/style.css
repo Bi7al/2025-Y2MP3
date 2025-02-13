@@ -1,0 +1,74 @@
+/* 
+COlors
+151E3F Space Cadet
+F2F3D9 Beige
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#F2F3D9 ;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+nav{
+    height: 5rem;
+    width: 100vw;
+    background: #030027;
+    display: flex;
+    align-items: center;
+    padding-left: 2.5rem;
+}
+main{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 25rem;
+    width: 35rem;
+    border:1px solid #030027;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+    h2{
+        color: #030027;
+    }
+}
+form{
+    margin-top: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+.linkInput{
+    padding: .5rem;
+    width: 26rem;
+    border-radius: .25rem;
+    border: 1px solid #030027;
+    outline:none;
+
+}
+.linkInput:focus{
+    outline: 2px solid #030027;
+}
+
+
+.btn{
+    background-color: #030027;
+    padding: .5rem;
+    width: 7rem;
+    border-radius: .5rem;
+}
+.btn:hover{
+    cursor: pointer;
+    scale: 1.10;
+}
