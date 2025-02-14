@@ -13,7 +13,7 @@ document.getElementById('convertBtn').addEventListener('click', async function (
         },
         body: JSON.stringify({ url: url })
     })
-
+    console.log(response)
     if (response.ok) {
         console.log(response)
         let blob = await response.blob();
