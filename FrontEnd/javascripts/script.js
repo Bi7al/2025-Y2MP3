@@ -5,8 +5,9 @@ document.getElementById('convertBtn').addEventListener('click', async function (
     input.value = "";
     console.log(url)
 
-    let response = await fetch('https://2025-y2-mp-3.vercel.app/convert', {
+    let response = await fetch('/convert', {
         method: 'POST',
+        host: 'https://2025-y2-mp-3.vercel.app',
         headers: {
             'Content-Type': 'application/json'
 
