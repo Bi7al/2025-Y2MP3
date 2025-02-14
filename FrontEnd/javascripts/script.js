@@ -1,15 +1,15 @@
-document.getElementById('convertBtn').addEventListener('click', async function (e) {
-    e.preventDefault();
-    const input = document.getElementById('url');
-    const url = input.value;
-    input.value = "";
-    console.log(url)
+document.getElementById('convertBtn').addEventListener('click', function() {
+    const url = document.getElementById('url').value;
 
-    let response = await fetch('/', {
-        method: 'POST',
-        host: 'https://2025-y2-mp-3.vercel.app',
+    fetch('/convert', {
+        method: 'POST',  // Ensure this is POST
         headers: {
             'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ url: url })
+    })
+    .then(response => {
+        if (response.ok) {
 
         },
         body: JSON.stringify({ url: url })

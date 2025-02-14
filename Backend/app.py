@@ -32,7 +32,7 @@ def youtube_to_mp3(youtube_url, output_path="output"):
     except Exception as e:
         return str(e)
 
-@app.route('/convert', methods=['POST'])
+@app.route('/', methods=['POST'])
 def convert_video():
     url = request.json['url']
     try:
