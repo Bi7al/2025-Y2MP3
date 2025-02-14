@@ -22,7 +22,7 @@ document.getElementById('convertBtn').addEventListener('click', function () {
             a.style.display = 'none';
             a.href = url;
             a.download = 'output.mp3';
-            document.body.appendChild(a);
+            document.body.main.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
         })

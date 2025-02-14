@@ -28,11 +28,14 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    a{
+        color: #030027;
+    }
 }
 .container{
     height: 25rem;
     width: 35rem;
-    border:1px solid #030027;
+    border:3px solid #030027;
     border-radius: .5rem;
     display: flex;
     align-items: center;
@@ -54,6 +57,7 @@ form{
     width: 26rem;
     border-radius: .25rem;
     border: 1px solid #030027;
+    color: #030027;
     outline:none;
 
 }
