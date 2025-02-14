@@ -1,10 +1,11 @@
-# app.py
 from flask import Flask, request, send_file
+from flask_cors import CORS
 import os
 from pytubefix import YouTube
 import subprocess
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 def youtube_to_mp3(youtube_url, output_path="output"):
     try:
@@ -31,15 +32,6 @@ def youtube_to_mp3(youtube_url, output_path="output"):
     except Exception as e:
         return str(e)
 
-
-
-
-
-
-
-
-
-
 @app.route('/convert', methods=['POST'])
 def convert_video():
     url = request.json['url']
@@ -49,8 +41,5 @@ def convert_video():
     except Exception as e:
         return {'error': str(e)}, 400
 
-    
-    
-
-if __name__ == "__main__":
-    app.run() 
+if __name__ == '__main__':
+    app.run(debug=True)
