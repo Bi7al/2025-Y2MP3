@@ -1,5 +1,6 @@
 document.getElementById('convertBtn').addEventListener('click', function () {
     const url = document.getElementById('url').value;
+    console.log(url)
     fetch('https://2025-y2-mp-3.vercel.app/convert', {
         method: 'POST',
         headers: {
