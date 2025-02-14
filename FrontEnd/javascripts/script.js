@@ -1,4 +1,5 @@
-document.getElementById('convertBtn').addEventListener('click', async function () {
+document.getElementById('convertBtn').addEventListener('click', async function (e) {
+    e.preventDefault();
     const input = document.getElementById('url');
     const url = input.value;
     input.value = "";
