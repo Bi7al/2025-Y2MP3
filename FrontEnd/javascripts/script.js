@@ -1,10 +1,7 @@
 document.getElementById('convertBtn').addEventListener('click', function () {
-
     const url = document.getElementById('url').value;
-
     fetch('https://2025-y2-mp-3.vercel.app/convert', {
         method: 'POST',
-
         headers: {
             'Content-Type': 'application/json'
 
@@ -14,7 +11,7 @@ document.getElementById('convertBtn').addEventListener('click', function () {
         .then(response => {
             if (response.ok) {
                 console.log(response)
-                // return response.blob();
+                return response.blob();
             } else {
                 throw new Error('Conversion failed');
             }
