@@ -41,5 +41,5 @@ def convert_video():
     except Exception as e:
         return {'error': str(e)}, 400
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Vercel requires a WSGI application
+app = app
